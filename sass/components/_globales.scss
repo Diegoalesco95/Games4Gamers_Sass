@@ -11,9 +11,25 @@ $color-variacion: #3f579a;
   color: $color-primario;
   background-color: $color-claro;
 }
+@mixin titulos($fuente) {
+  @if $fuente == $fuente1 {
+    font-family: $fuente1;
+  } @else {
+    font-family: $fuente2;
+    text-transform: uppercase;
+  }
+}
+
 
 @function get-opacity($color, $nivel) {
   @return rgba($color, $nivel);
+}
+
+@each $header, $size in (h1: 30px, h2: 25px, h3: 20px) {
+  #{$header} {
+    font-size: $size;
+    margin: 0;
+  }
 }
 
 * {
@@ -21,7 +37,7 @@ $color-variacion: #3f579a;
 }
 body {
   margin: 0;
-  font-family: $fuente1;
+  @include titulos($fuente1);
 }
 main {
   display: flex;
