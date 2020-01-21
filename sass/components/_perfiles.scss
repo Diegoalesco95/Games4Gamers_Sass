@@ -1,12 +1,12 @@
 .perfil {
   width: 50%;
   padding-top: 50px;
-  color: $color-claro;
-  background-color: $color-secundario;
+  color: $color-secundario;
+  background-color: $color-claro;
   &__avatar {
     display: block;
-    margin: 0 auto;
-    border-radius: 50em;
+    margin: 10px auto;
+    border-radius: 30px;
   }
   &__nombre {
     text-align: center;
@@ -19,21 +19,21 @@
     text-align: center;
     font-weight: 700;
     font-size: 12px;
-    color: get-opacity($color-claro, .50);
+    color: get-opacity($color-variacion, .50);
   }
   &__boton {
     display: block;
     width: 100px;
     height: 40px;
     margin: 15px auto;
-    padding-top: 15px;
+    padding-top: 5px; 
     border-radius: 20px;
     text-decoration: none;
     text-align: center;
     color: $color-claro;
     @include titulos($fuente2);
-    background-color: get-opacity($color-primario, .20);
-    border: 2px solid get-opacity($color-claro, 0.30);
+    background-color: get-opacity($color-primario, .90);
+    border: 2px solid get-opacity($color-claro, 0.80);
   }
 }
 .perfil__minibio {
